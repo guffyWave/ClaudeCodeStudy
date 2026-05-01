@@ -29,3 +29,7 @@ There is no backend, no routing, and no persistent storage — everything resets
 ## Key context
 
 This project is intentionally built with bugs, poor UI, and messy code as a learning exercise. Improvements — refactoring, bug fixes, component extraction — are the expected work here.
+
+Known bugs in the current code:
+- `amount` is stored as a string (input value is never parsed), so the `reduce` calls in the summary totals use string concatenation instead of addition — totals are wrong.
+- The seed transaction "Freelance Work" (id 4) is typed `"expense"` but categorized as `"salary"` — it should be `"income"`.
