@@ -5,6 +5,7 @@ const categories = ["food", "housing", "utilities", "transport", "entertainment"
 function TransactionList({ transactions, onDelete }) {
   const [filterType, setFilterType] = useState("all");
   const [filterCategory, setFilterCategory] = useState("all");
+  const [selectedId, setSelectedId] = useState(null);
 
   let filtered = transactions;
   if (filterType !== "all") {
@@ -43,7 +44,12 @@ function TransactionList({ transactions, onDelete }) {
         </thead>
         <tbody>
           {filtered.map(t => (
-            <tr key={t.id}>
+            <tr
+              key={t.id}
+              className={selectedId === t.id ? 'selected' : undefined}
+              onClick={() => setSelectedId(prev => prev === t.id ? null : t.id)}
+              style={{ cursor: 'pointer' }}
+            >
               <td>{t.date}</td>
               <td>{t.description}</td>
               <td>{t.category}</td>
