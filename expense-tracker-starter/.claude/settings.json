@@ -3,7 +3,6 @@
   "permissions": {
 
     "allow": [
-     //Reading files and folders,ls lists directory content
      "Bash(cat *)",
      "Bash(ls *)",
 
