@@ -1,4 +1,3 @@
-
 ---
 name: cityweather                        # Optional display name
 description: Tells how the weather of Belleville going to be    # Recommended — helps Claude auto-trigger it

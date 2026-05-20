@@ -4,6 +4,9 @@ import Summary from './Summary'
 import AddTransaction from './AddTransaction'
 import TransactionList from './TransactionList'
 
+
+//Download more SKILL from https://github.com/guffyWave/superpowers/tree/main#claude-code
+
 function App() {
   const [transactions, setTransactions] = useState([
     { id: 1, description: "Salary", amount: 5000, type: "income", category: "salary", date: "2025-01-01" },
